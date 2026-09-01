@@ -1,18 +1,18 @@
 const homeScoreEl = document.getElementById("home-score");
-const guestScoreEl = document.getElementById("guest-score");
+const awayScoreEl = document.getElementById("away-score");
 let homeScore = 0;
-let guestScore = 0;
+let awayScore = 0;
 
 function updateDisplay() {
   homeScoreEl.textContent = homeScore;
-  guestScoreEl.textContent = guestScore;
+  awayScoreEl.textContent = awayScore;
 }
 
 function changeScore(team, points) {
   if (team === "home") {
     homeScore += points;
-  } else if (team === "guest") {
-    guestScore += points;
+  } else if (team === "away") {
+    awayScore += points;
   }
   updateDisplay();
 }
@@ -20,13 +20,13 @@ function changeScore(team, points) {
 function changeScore(team, points) {
   if (team === "home") {
     homeScore += points;
-  } else if (team === "guest") {
-    guestScore += points;
+  } else if (team === "away") {
+    awayScore += points;
   }
   updateDisplay();
 }
 function resetAll() {
   homeScore = 0;
-  guestScore = 0;
+  awayScore = 0;
   updateDisplay();
 }
